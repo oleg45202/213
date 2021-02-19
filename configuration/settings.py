@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DJANGO_DEBUG", False)
+DEBUG = os.getenv("DJANGO_DEBUG", True)
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", ['127.0.0.1', 'localhost', '.vercel.app', 'a.run.app', '.a.run.app', '.herokuapp.com'])
 
@@ -137,4 +137,4 @@ STATICFILES_DIR = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 WHITENOISE_INDEX_FILE = True
-WHITENOISE_ROOT = os.path.join(STATIC_ROOT)
+WHITENOISE_ROOT = os.path.join(STATIC_ROOT, "")
