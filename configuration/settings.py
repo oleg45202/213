@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'core.apps.CoreConfig'
+    'core.apps.CoreConfig'
 ]
 
 MIDDLEWARE = [
@@ -137,4 +137,4 @@ STATICFILES_DIR = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 WHITENOISE_INDEX_FILE = True
-WHITENOISE_ROOT = os.path.join(STATIC_ROOT, "")
+WHITENOISE_ROOT = os.path.join(STATIC_ROOT)
